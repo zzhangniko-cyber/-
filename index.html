@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
+<html lang="zh-CN" class="js trae-edit-mode-dragging"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#FBF7F0">
@@ -11,7 +11,7 @@
 <meta property="og:description" content="深圳1021个小区步行实测：15分钟医疗圈，如何真正走进生活？">
 <link rel="icon" href="data:,">
 <script>document.documentElement.className+=' js';</script>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="has-topnav motion-off">
 
@@ -19,7 +19,7 @@
 <nav class="topnav" id="topnav">
   <a class="brand" href="#s0">15分钟医疗圈</a>
   <div class="links">
-    <a href="#s1">起点之问</a>
+    <a href="#s1" class="on">起点之问</a>
     <a href="#s2">基层拼图</a>
     <a href="#s3">空间实测</a>
     <a href="#s4">就医路径</a>
@@ -30,7 +30,7 @@
   </div>
   <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="true" title="减少动态效果">减少动态</button>
 </nav>
-<div id="rail"></div>
+<div id="rail"><div class="dot" title="封面"><span class="tip">封面</span></div><div class="dot on" title="起点之问"><span class="tip">起点之问</span></div><div class="dot" title="基层拼图"><span class="tip">基层拼图</span></div><div class="dot" title="空间实测"><span class="tip">空间实测</span></div><div class="dot" title="就医路径"><span class="tip">就医路径</span></div><div class="dot" title="服务时间"><span class="tip">服务时间</span></div><div class="dot" title="三地破局"><span class="tip">三地破局</span></div><div class="dot" title="回到原点"><span class="tip">回到原点</span></div><div class="dot" title="数据溯源"><span class="tip">数据溯源</span></div></div>
 <!-- 视差背景层（最远层：缓慢移动） -->
 <div class="px-bg" id="pxBg" data-px="bg" aria-hidden="true">
   <span class="blob b1"></span>
@@ -42,13 +42,13 @@
 <main id="app">
 
 <!-- ================= S0 封面（独立一页 · 深底压图） ================= -->
-<section class="ch cover" id="s0" data-ch="" data-lab="封面">
+<section class="ch cover in" id="s0" data-ch="" data-lab="封面">
   <div class="cover-media">
     <img src="img/hero/hero_C_去社康的路_夜.png" alt="夜色里通往社康的路" width="1536" height="1024">
     <span class="cover-veil"></span>
   </div>
   <div class="cover-body">
-    <h1 class="cover-title"><span class="t-l1">奔向2027：15分钟医疗圈</span><span class="t-l2">如何真正走进生活？</span></h1>
+    <h1 class="cover-title" style=""><span class="t-l1" style="">奔向2027：15分钟医疗圈</span><span class="t-l2" style="">如何真正走进生活？</span></h1>
     <p class="cover-sub">从家门口出发，走到真实获得医疗服务的那一步，这个距离才算真正走进生活。</p>
   </div>
   <span class="cover-scroll" aria-hidden="true"><i></i></span>
@@ -56,12 +56,12 @@
 
 <!-- ================= S1 起点之问（标题页 + 开篇正文） ================= -->
 <section class="ch" id="s1" data-ch="" data-lab="起点之问" data-chap="#E8A33D">
-  <div class="titlepage">
+  <div class="titlepage in">
     <h2 class="q-big"><span class="w">生病时，</span><br><span class="w">你的第一反应是去哪</span><span class="qmark">？</span></h2>
   </div>
 
   <div class="inner">
-    <div class="chapter-head" data-reveal="">
+    <div class="chapter-head in" data-reveal="">
       <h2 class="ch-name">起点之问</h2>
       <p class="ch-sub">到「家门口」的这段路，不止一个距离</p>
     </div>
@@ -121,9 +121,9 @@
     </figure>
 
     <div class="notes">
-      <div class="sticky"><span class="sv" data-val="100" data-suf="+">100.0+</span><p class="su">全国年诊疗人次（亿）</p><p class="sd">基层承接了其中过半的诊疗服务</p></div>
-      <div class="sticky"><span class="sv" data-val="56.4" data-dec=".1" data-suf="%">56.40%</span><p class="su">2015 年基层诊疗占比</p><p class="sd">十年前这条曲线的起点</p></div>
-      <div class="sticky"><span class="sv amber" data-val="53.1" data-dec=".1" data-suf="%">53.10%</span><p class="su">2025 年基层诊疗占比</p><p class="sd">公报口径 · 仍未回到十年前</p></div>
+      <div class="sticky"><span class="sv" data-val="100" data-suf="+">0+</span><p class="su">全国年诊疗人次（亿）</p><p class="sd">基层承接了其中过半的诊疗服务</p></div>
+      <div class="sticky"><span class="sv" data-val="56.4" data-dec=".1" data-suf="%">0.0%</span><p class="su">2015 年基层诊疗占比</p><p class="sd">十年前这条曲线的起点</p></div>
+      <div class="sticky"><span class="sv amber" data-val="53.1" data-dec=".1" data-suf="%">0.0%</span><p class="su">2025 年基层诊疗占比</p><p class="sd">公报口径 · 仍未回到十年前</p></div>
     </div>
 
     <div class="blk" data-reveal="">
@@ -133,8 +133,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">全国基层诊疗占比：十年间走过一条浅 V</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图1">
-      </div>
+        <div class="fig-body" data-fig="图1" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1791561512454"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：历年全国卫生健康事业发展统计公报（2015–2025）｜样本量：全国总量（亿人次）｜时间：2015–2025｜口径：基层＝社区卫生服务中心(站)+乡镇卫生院+村卫生室+门诊部(所)；2025 年为公报值 53.1%（吹风会口径 52.6% 仅作对照）；2020 年受疫情影响为异常年。</p>
     </div>
     </div>
@@ -149,8 +148,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">村卫生室与门诊部及诊所：此消彼长的十年</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图2">
-      </div>
+        <div class="fig-body" data-fig="图2" _echarts_instance_="ec_1791561512455" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：历年全国卫生健康事业发展统计公报｜样本量：全国机构数（万所）｜时间：2015–2025｜口径：门诊部及诊所 2024 年起为「门诊部 47242 ＋ 诊所/医务室 351736」合并口径；2025 年仅村卫生室有公报值 56.0 万（四舍五入），门诊部及诊所未披露，故虚线止于 2024。</p>
     </div>
     </div>
@@ -169,8 +167,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">基层卫生人员：柱子长高了，占比却几乎走平</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图3">
-      </div>
+        <div class="fig-body" data-fig="图3" _echarts_instance_="ec_1791561512456" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：历年全国卫生健康事业发展统计公报（2015–2024）｜样本量：全国基层卫生人员数与占卫生人员总数比｜时间：2015–2024｜口径：2023 年起全科医生统计口径调整，2022→2023 的跳升含口径变化；左轴为人员绝对数（万人），右轴为占卫生人员总数比（%）。</p>
     </div>
     </div>
@@ -185,8 +182,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">机构密度与使用率：全省放在同一张图上看</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图4">
-      </div>
+        <div class="fig-body" data-fig="图4" _echarts_instance_="ec_1791561512457" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：2023年《中国卫生健康统计年鉴》机构数据与2024年分省非医院机构占比数据｜样本量：30个省级单元｜时间：2023–2024｜口径：纵轴为非医院机构占比的倒算口径，不等同于基层诊疗实际使用率；机构数据与占比数据的年份不完全一致；气泡大小＝常住人口；r=0.030 表示线性相关极弱。</p>
     </div>
     </div>
@@ -241,8 +237,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">1021 个小区到最近社康的实测步行时间</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图5b">
-      </div>
+        <div class="chipbar"><button type="button" class="on">全部（构成）</button><button type="button" class="">0–5 分钟</button><button type="button" class="">5–10 分钟</button><button type="button" class="">10–15 分钟</button><button type="button" class="">15–20 分钟</button><button type="button" class="">20–25 分钟</button><button type="button" class="">25–30 分钟</button><button type="button" class="">30 分钟以上</button></div><div class="fig-body" data-fig="图5b" _echarts_instance_="ec_1791561512458" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：高德步行路径规划 API 逐点实测；样本：商品房 801 / 老旧社区 172 / 城中村 48，合计 1021 个小区；时间：2026-09 采集；口径：步行时间取「门到门最短路径」，不含等电梯与挂号；点选时段按钮，可切换只看某一个时段，选「全部（构成）」看 7 段完整构成；前 3 段（0–15 分钟）为 15 分钟政策线以内；⚠ 城中村样本仅 48 个，长尾各段计数极小，不作比例外推。</p>
     </div>
     </div>
@@ -260,10 +255,10 @@
           <svg class="illus estate-illus" viewBox="0 0 300 170" aria-label="三类小区彩色手绘：高层商品房、密集城中村、坡顶老旧社区">
             <defs>
               <filter id="paperGrain" x="-5%" y="-5%" width="110%" height="110%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/>
-                <feColorMatrix in="n" type="saturate" values="0"/>
-                <feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
-                <feComposite in2="SourceGraphic" operator="over"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"></feTurbulence>
+                <feColorMatrix in="n" type="saturate" values="0"></feColorMatrix>
+                <feComponentTransfer><feFuncA type="linear" slope="0.06"></feFuncA></feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="over"></feComposite>
               </filter>
             </defs>
             <path class="hand" d="M10,150 C110,142 200,148 292,144" stroke="#8A93A6" stroke-width="2.5" opacity=".5"></path>
@@ -345,8 +340,7 @@
           <div class="fig" data-reveal="">
             <h3 class="fig-title">三类小区：样本量 / 可达率 / 中位步行</h3>
             <div class="fig-panel">
-              <div class="fig-body" data-fig="图5c">
-            </div>
+              <div class="fig-body" data-fig="图5c" _echarts_instance_="ec_1791561512459" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
             <p class="fig-note">数据来源：高德步行路径规划 API 逐点实测；样本：商品房 801 / 老旧社区 172 / 城中村 48，合计 1021 个小区；时间：2026-09 采集；口径：可达率＝该类小区步行 ≤15 分钟数量 ÷ 该类样本量，中位步行＝该类小区到最近社康步行时间的中位数（门到门，不含等电梯与挂号）；⚠ 三栏 x 轴量纲不同（个 / ％ / 分钟），只作横向「同类比较」；⚠ 城中村仅 48 样本，稳定性弱于商品房与老旧社区。</p>
           </div>
         </div>
@@ -362,8 +356,7 @@
     <div class="fig fig-fw" data-reveal="">
       <h3 class="fig-title">深圳 10 区 15 分钟步行可达率地图</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图6" style="height:560px">
-      </div>
+        <div class="fig-body" data-fig="图6" style="height: 560px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1791561512460"><div style="position: relative; width: 507px; height: 560px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="633" height="700" style="position: absolute; left: 0px; top: 0px; width: 507px; height: 560px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：高德步行路径规划 API 逐点实测；样本：深圳 1021 个居住小区，分区样本量 21（大鹏新区）–156（宝安区）；时间：2026-09 采集；口径：可达率＝该区步行 ≤15 分钟小区数 ÷ 该区样本数；⚠ 大鹏新区样本仅 21 个，颜色极不稳定，仅作方向参考；⚠ 官方口径（90% 以上）与本次实测口径（全市 85.3%）不同，不可直接相减；⚠ 底图：DataV GeoAtlas 440300，大鹏半岛从龙岗区拆出、单列为「大鹏新区」（按 440399 标记）。</p>
     </div>
     </div>
@@ -382,8 +375,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">各区「15 分钟不可达」常住人口（万人）</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图6b">
-      </div>
+        <div class="chipbar"><button type="button" data-o="un">按不可达人口</button><button type="button" data-o="unr">按不可达率</button><button type="button" data-o="ci">95% 区间</button></div><div class="fig-body" data-fig="图6b" _echarts_instance_="ec_1791561512461" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：高德步行路径规划 API 逐点实测（2026-09 采集）＋ 2024 年末常住人口；样本：深圳 1021 个居住小区，分区样本量 21（大鹏新区）–156（宝安区）；口径：不可达人口 ＝ 该区常住人口 ×（1 − 该区 15 分钟步行可达率），假设样本小区可在区内代表人口分布；条形长度＝不可达人口估计值，条形颜色＝该区不可达率，横线＝该估计值的 95% 置信区间；⚠ 大鹏新区样本仅 21 个，置信区间极宽，只作方向参考；⚠ 十区合计约 248.4 万，为样本外推估计，非官方统计；⚠ 人口为 2024 年末数据，与 2026 年实测可达率存在年份差。</p>
     </div>
     </div>
@@ -418,9 +410,9 @@
     </figure>
 
     <div class="notes">
-      <div class="sticky"><span class="sv" data-val="27.96" data-dec=".00" data-suf="%">27.960%</span><p class="su">上海社区诊疗占比（2024）</p><p class="sd">2015 年为 32.7%，一路下行</p></div>
-      <div class="sticky"><span class="sv" data-val="65" data-suf="%">65.0%</span><p class="su">试点城市考核标准</p><p class="sd">国办发〔2015〕70 号附件 · 非全国统一目标</p></div>
-      <div class="sticky"><span class="sv gap" data-val="0.69" data-dec=".00" data-suf="%">0.690%</span><p class="su">双向转诊占基层诊疗量比重</p><p class="sd">通道存在，但绝大多数就诊没有被「转」</p></div>
+      <div class="sticky"><span class="sv" data-val="27.96" data-dec=".00" data-suf="%">0.00%</span><p class="su">上海社区诊疗占比（2024）</p><p class="sd">2015 年为 32.7%，一路下行</p></div>
+      <div class="sticky"><span class="sv" data-val="65" data-suf="%">0%</span><p class="su">试点城市考核标准</p><p class="sd">国办发〔2015〕70 号附件 · 非全国统一目标</p></div>
+      <div class="sticky"><span class="sv gap" data-val="0.69" data-dec=".00" data-suf="%">0.00%</span><p class="su">双向转诊占基层诊疗量比重</p><p class="sd">通道存在，但绝大多数就诊没有被「转」</p></div>
     </div>
 
     <div class="blk" data-reveal="">
@@ -431,8 +423,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">全国基层诊疗占比距 65% 试点考核线的缺口</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图7">
-      </div>
+        <div class="fig-body" data-fig="图7" _echarts_instance_="ec_1791561512462" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：历年《我国卫生健康事业发展统计公报》；时间：2015–2025；口径：图7 以 2025 年数据为重点，65% 出自国办发〔2015〕70 号附件的<b>试点城市考核标准</b>（引用须写「试点」），不是全国统一目标；⚠ 与第一章图1 口径不同：图1 为基层诊疗量占比，本图为距 65% 目标的绝对缺口，两者互补，不作并列或相减；⚠ 2020 年受疫情影响为异常年。</p>
     </div>
     </div>
@@ -445,8 +436,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">全国回升 vs 上海向下：两条曲线的十年</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图8">
-      </div>
+        <div class="fig-body" data-fig="图8" _echarts_instance_="ec_1791561512463" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：上海统计年鉴（社区诊疗占比）＋历年《我国卫生健康事业发展统计公报》（全国基层占比）；时间：2015–2024；口径：上海「社区诊疗占比」（27.96%，2024）与全国「基层诊疗占比」（52.1%，2024）是两个不同口径、不同分母，绝对值不可直接比较，本图只比趋势方向（2015=100 指数化）；上海 2020/2022 为疫情异常年；上海下降主要集中在中心城区。</p>
     </div>
     </div>
@@ -462,8 +452,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">上海组合签约率：名字多了，脚步没有跟上</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图9">
-      </div>
+        <div class="fig-body" data-fig="图9" _echarts_instance_="ec_1791561512464" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：上海市历年统计公报、市卫健委政协提案答复、经济日报、健康报；时间：2016–2024；口径：2017–2022 的五个点原文均为「超/以上」，只能当<b>下限</b>读（空心点表示），2023–2024 才是精确值（实心点）；⚠ 签约率（占居民比）与社区诊疗占比（占就诊比）是两个不同口径，不可并列或相减。</p>
     </div>
     </div>
@@ -488,8 +477,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">双向转诊：通道变宽，占比仍然很小</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图10">
-      </div>
+        <div class="fig-body" data-fig="图10" _echarts_instance_="ec_1791561512465" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：国家卫健委/医保局历年答复与发布会实录（逐年来源不同，见数据表）；时间：2015–2025；口径：转诊率＝双向转诊人次 ÷ 基层诊疗人次（分母为基层，非总诊疗）；⚠ 2017、2022 为自行反推的推算值（空心标记）；2016、2025 无官方总量，不画点；数据性质逐年不同，趋势方向可读、绝对值需谨慎。</p>
     </div>
     </div>
@@ -524,8 +512,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">24 小时里，「步行可达且开诊」的变化</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图11">
-      </div>
+        <div class="fig-body" data-fig="图11" _echarts_instance_="ec_1791561512466" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：高德步行路径实测 × 社康营业时间解析；时间：2026-09；样本：1021 小区 × 945 机构；口径：可达率＝该小时「步行≤15 分钟且机构开诊」的小区占比；⚠ 晚间可达率为下限（高德营业时间系统性低估晚间，盐田逐点复核差异中 4/5 为高德偏短）；⚠ 夜间非 0 的部分来自 24 小时急诊兜底，不代表「15 分钟医疗圈」覆盖；8 点前的低值不代表无人可达——是机构未开诊。</p>
     </div>
     </div>
@@ -548,14 +535,13 @@
     <!-- 177 便签墙 -->
     <div class="note-wall" data-reveal="">
       <p class="wall-cap">除实际开诊时间外，公开信息是否完整，也影响居民对服务时间的判断。<b>945 家社康中，177 家缺少可直接使用的营业时间字段，占 18.7%。</b>机构在地图上可以被找到，并不意味着居民能够从公开信息中确认其开放时间。下图每个灰色便签，就是一家「查不到几点开门」的社康。</p>
-            <div class="badgewall" id="badgewall"></div>
+            <div class="badgewall" id="badgewall"><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div><div class="badge"></div></div>
     </div>
 
     <div class="fig" data-reveal="">
       <h3 class="fig-title">机构开着，不等于 15 分钟内能走到一家开着的机构</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图12">
-      </div>
+        <div class="fig-body" data-fig="图12" _echarts_instance_="ec_1791561512467" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：高德开放平台 POI 营业时间解析（表 D）；时间：2026-09；样本：945 家机构；口径：开诊占比＝该小时处于营业时段内的机构数 ÷ 945，不含空间可达约束；⚠ 「城市人作息」为典型作息的示意曲线，用于对照，非实测数据；⚠ 0.8% 的夜间基线来自 24 小时值班站及营业时间缺失机构。</p>
     </div>
     </div>
@@ -574,8 +560,7 @@
     <div class="fig" data-reveal="">
       <h3 class="fig-title">区 × 时段：一天里哪些地方、哪些时候还能看病</h3>
       <div class="fig-panel">
-        <div class="fig-body" data-fig="图13">
-      </div>
+        <div class="scrubbar"><span>只看某小时：</span><input type="range" min="0" max="23" value="0" class="scrub" aria-label="选择小时"><span class="scrub-now">全时段</span><button type="button" class="scrub-all">全部时段</button></div><div class="fig-body" data-fig="图13" _echarts_instance_="ec_1791561512468" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 563px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="703" height="575" style="position: absolute; left: 0px; top: 0px; width: 563px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <p class="fig-note">数据来源：高德步行路径实测 × 社康营业时间解析（表 A–E）；时间：2026-09；样本：各区内有营业时间的小区（见各区括号内 n）；口径：可达率＝该区该小时「步行≤15 分钟且有机构开诊」的小区占比；⚠ 光明区 95 个样本中 55 个营业时间未知、大鹏新区仅 21 个样本，两区结果不确定性大，读图时须对照括号内 n；⚠ 龙华区因含较多 24 小时值班站，深夜逆势偏高，属特例而非普遍。</p>
     </div>
     </div>
@@ -621,8 +606,7 @@
         <p class="mech">把现有的网用得更透：网点在净减少，诊疗量却在明显增长。</p>
         <div class="fig">
           <div class="fig-panel">
-            <div class="fig-body" data-fig="图14">
-          </div>
+            <div class="fig-body" data-fig="图14" _echarts_instance_="ec_1791561512469" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 591px; height: 250px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="738" height="312" style="position: absolute; left: 0px; top: 0px; width: 591px; height: 250px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
           <p class="srcn">图14 · 机构数量 vs 社区诊疗量（2023–2024）</p>
         </div>
       </div>
@@ -633,8 +617,7 @@
         <p class="mech">把人引回正确的路径：基层诊疗占比沿着时间一路向上。</p>
         <div class="fig">
           <div class="fig-panel">
-            <div class="fig-body" data-fig="图15">
-          </div>
+            <div class="fig-body" data-fig="图15" _echarts_instance_="ec_1791561512470" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 591px; height: 250px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="738" height="312" style="position: absolute; left: 0px; top: 0px; width: 591px; height: 250px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
           <p class="srcn">图15 · 长汀基层诊疗占比（2018 → 2025）</p>
         </div>
       </div>
@@ -649,8 +632,7 @@
         <p class="mech">把时间对齐人的生活：服务时间统一延长，夜诊纳入区域安排。</p>
         <div class="fig">
           <div class="fig-panel">
-            <div class="fig-body" data-fig="图16">
-          </div>
+            <div class="fig-body" data-fig="图16" _echarts_instance_="ec_1791561512471" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 591px; height: 250px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="738" height="312" style="position: absolute; left: 0px; top: 0px; width: 591px; height: 250px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
           <p class="srcn">图16 · 天河社康延时服务结构</p>
         </div>
       </div>
@@ -818,9 +800,10 @@
 })();
 </script>
 
-<script src="assets/echarts.min.js"></script>
-<script src="assets/charts.js"></script>
-<script src="assets/app.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+
 
 
 
